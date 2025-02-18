@@ -75,6 +75,11 @@ This exercise defines a function called `hjms()` that converts a given number of
 
 
 **Example:**
+
+
+
+
+
 ![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex2s1.PNG)
 ![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex2s2.PNG)
 
@@ -86,6 +91,10 @@ This exercise enhances the `hjms()` function by improving the output format:
 - Singular/plural handling (e.g., "1 hour" instead of "1 hours").
 
 **Example:**
+
+
+
+
 ![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex3s1.PNG)
 
 ```
