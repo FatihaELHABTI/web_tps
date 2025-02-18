@@ -27,6 +27,10 @@ The function prompts the user to enter a temperature in Fahrenheit and then disp
 ```
 
 **Example:**
+
+
+
+
 ![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex1s1.PNG)
 ![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex1s2.PNG)
 
