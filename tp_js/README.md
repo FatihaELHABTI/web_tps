@@ -11,7 +11,9 @@ The function prompts the user to enter a temperature in Fahrenheit and then disp
 
 
 **Example:**
-![image_alt](https://github.com/lilyhabti/s1_projects/blob/main/java_tp3/src/ex1/imgs/cap1.PNG)
+![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex1s1.PNG)
+![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex1s2.PNG)
+
 
 ---
 
@@ -25,16 +27,11 @@ This exercise defines a function called `hjms()` that converts a given number of
 - 1 hour = 60 minutes
 - 1 minute = 60 seconds
 
-**Technologies Used:**
-- JavaScript (prompt and alert functions)
+
 
 **Example:**
-```
-Enter number of seconds: 90061
-Result: 1 day, 1 hour, 1 minute, 1 second
-```
-
----
+![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex2s1.PNG)
+![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex2s2.PNG)
 
 ## Exercise 3: Improved Time Conversion
 
@@ -44,18 +41,8 @@ This exercise enhances the `hjms()` function by improving the output format:
 - Singular/plural handling (e.g., "1 hour" instead of "1 hours").
 
 **Example:**
-```
-Enter number of seconds: 7320
-Result: 2 hours, 2 minutes
-```
+![image_alt](https://github.com/FatihaELHABTI/web_tps/blob/main/tp_js/ex3s1.PNG)
 
----
-
-## How to Run
-1. Open a web browser.
-2. Open the browser console (F12 > Console).
-3. Copy and paste the JavaScript code.
-4. Execute the function by calling it, e.g., `degreC();` or `hjms();`.
 
 ---
 
