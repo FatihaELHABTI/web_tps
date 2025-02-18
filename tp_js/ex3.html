@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Conversion de Durées</title>
+
+</head>
+
+<body>
+
+
+    <script>
+        function hjms() {
+                let totalSeconds = prompt("Entrez un nombre de secondes :");
+                totalSeconds = parseInt(totalSeconds);
+
+                if (isNaN(totalSeconds) || totalSeconds < 0) {
+                    alert("Veuillez entrer un nombre valide.");
+                    return;
+                }
+
+                let jours = Math.floor(totalSeconds / (24 * 3600));
+                let reste = totalSeconds % (24 * 3600);
+                let heures = Math.floor(reste / 3600);
+                reste %= 3600;
+                let minutes = Math.floor(reste / 60);
+                let secondes = reste % 60;
+
+                let result = [];
+
+                if (jours > 0) result.push(`${jours} ${jours === 1 ? "jour" : "jours"}`);
+                if (heures > 0) result.push(`${heures} ${heures === 1 ? "heure" : "heures"}`);
+                if (minutes > 0) result.push(`${minutes} ${minutes === 1 ? "minute" : "minutes"}`);
+                if (secondes > 0) result.push(`${secondes} ${secondes === 1 ? "seconde" : "secondes"}`);
+
+                alert(result.join(", "));
+            }
+
+            // Appel de la fonction
+            hjms();
+
+
+    </script>
+
+</body>
+
+</html>

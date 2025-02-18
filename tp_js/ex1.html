@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Conversion de Température</title>
+</head>
+<body>
+
+    <h2>Convertisseur Fahrenheit → Celsius</h2>
+    <!--<button onclick="degreC()">Convertir</button>-->
+
+    <script>
+        function degreC() {
+            let tempF = prompt("Entrez une température en degrés Fahrenheit :");
+            tempF = parseFloat(tempF);
+
+            if (!isNaN(tempF)) {
+                let tempC = (5 / 9) * (tempF - 32);
+                alert(`La température en degrés Celsius est : ${tempC.toFixed(2)}°C`);
+            } else {
+                alert("Veuillez entrer un nombre valide.");
+            }
+
+        }
+        degreC()
+    </script>
+
+</body>
+</html>
