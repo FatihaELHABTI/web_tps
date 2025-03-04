@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" id="text1">
+            <input type="text" id="text2">
+            <input type="button" name="permuter" id="permuter" onclick="permuterTextes()" value="Permuter">
+        </div>
+
+        <script>
+            function permuterTextes(){
+                var input1 = document.getElementById("text1");
+                var input2 = document.getElementById("text2");
+                
+                var temp = input1.value;
+
+                input1.value = input2.value;
+                input2.value = temp;
+            }
+        </script>
+    </body>
+</html>

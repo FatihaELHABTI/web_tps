@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            .myDiv {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="myDiv">
+            <input type="text" placeholder="Entrer nombre 1" id="n1">
+            <input type="text" placeholder="Entrer nombre 2" id="n2">
+            <div class="operations">
+                <input type="button" value="+" onclick="additionner()" >
+                <input type="button" value="-" onclick="soustracter()">
+                <input type="button" value="*" onclick="multiplier()">
+                <input type="button" value="/" onclick="diviser()">
+            </div>
+            <input type="text" id="resultat">
+        </div>
+
+        <script>
+            
+            var result = 0;
+            function additionner(){
+                var n1 = parseInt(document.getElementById("n1").value);
+                var n2 = parseInt(document.getElementById("n2").value);
+                result = n1 + n2;
+                document.getElementById("resultat").value = result;
+            }
+            function soustracter(){
+                var n1 = parseInt(document.getElementById("n1").value);
+                var n2 = parseInt(document.getElementById("n2").value);
+                result = n1 - n2;
+                document.getElementById("resultat").value = result;
+            }
+            function multiplier(){
+                var n1 = parseInt(document.getElementById("n1").value);
+                var n2 = parseInt(document.getElementById("n2").value);
+                result = n1 * n2;
+                document.getElementById("resultat").value = result;
+            }
+            function diviser(){
+                var n1 = parseInt(document.getElementById("n1").value);
+                var n2 = parseInt(document.getElementById("n2").value);
+                result = n1 / n2;
+                document.getElementById("resultat").value = result;
+            }
+        </script>
+    </body>
+</html>

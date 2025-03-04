@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    
+
+    <script>
+        function troisNombres() {
+                let num1 = parseFloat(prompt("Entrez le premier nombre :"));
+                let num2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+                let num3 = parseFloat(prompt("Entrez le troisième nombre :"));
+
+                if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                    alert("Veuillez entrer des nombres valides.");
+                    return;
+                }
+
+                let numbers = [num1, num2, num3];
+                numbers.sort((a, b) => a - b);
+
+                alert(`1er nombre : ${numbers[0]}\n2eme nombre : ${numbers[1]}\n3eme nombre : ${numbers[2]}`);
+            }
+
+            
+            troisNombres();
+
+
+    </script>
+
+</body>
+
+</html>

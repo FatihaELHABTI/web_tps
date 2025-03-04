@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function triangleAlert() {
+                let taille = parseInt(prompt("Entrez la taille du triangle :"));
+
+                if (isNaN(taille) || taille <= 0) {
+                    alert("Veuillez entrer un nombre valide et positif.");
+                    return;
+                }
+
+                let ligne = "";
+                let resultat = "";
+
+                for (let i = 1; i <= taille; i++) {
+                    ligne += "*";
+                    resultat += ligne + "\n";
+                }
+
+                alert(resultat);
+            }
+
+            // Appel de la fonction
+            triangleAlert();
+
+
+    </script>
+
+</body>
+
+</html>

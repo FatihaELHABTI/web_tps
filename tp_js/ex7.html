@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Test Nombre Premier</title>
+</head>
+
+<body>
+
+    <script>
+        function premier() {
+            let nombre = parseInt(prompt("Entrez un nombre pour tester s'il est premier :"));
+
+            if (isNaN(nombre) || nombre <= 1) {
+                alert("Veuillez entrer un nombre entier supérieur à 1.");
+                return;
+            }
+
+            let estPremier = true;  
+
+            
+            for (let i = 2; i <= Math.sqrt(nombre); i++) {
+                if (nombre % i === 0) {
+                    estPremier = false;  
+                    break;  
+                }
+            }
+
+            if (estPremier) {
+                alert(nombre + " est un nombre premier.");
+            } else {
+                alert(nombre + " n'est pas un nombre premier.");
+            }
+        }
+
+        
+        premier();
+    </script>
+
+</body>
+
+</html>

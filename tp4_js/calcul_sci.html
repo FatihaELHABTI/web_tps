@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Avancée</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3e3e3;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 500px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+        }
+
+        #result {
+            grid-column: span 4;
+            padding: 15px;
+            font-size: 28px;
+            text-align: right;
+            border: 2px solid #bbb;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            width: 100%;
+            font-weight: bold;
+            color: #333;
+        }
+
+        button {
+            padding: 18px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #d1d1d1;
+        }
+
+        button:active {
+            background-color: #b0b0b0;
+        }
+
+        .special-btn {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        .special-btn:hover {
+            background-color: #e08600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="table-calculatrice">
+        <table class="calculator">
+            <tr>
+                <td colspan="7"><input type="text" id="result" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td><button onclick="ajouter('(')">(</button></td>
+                <td><button onclick="ajouter(')')">)</button></td>
+                <td><button onclick="ajouter('%')">%</button></td>
+                <td><button class="special-btn" onclick="effacer()">CE</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="calculerInv()">Inv</button></td>
+                <td><button onclick="ajouter('sin(')">sin</button></td>
+                <td><button onclick="ajouter('ln(')">ln</button></td>
+                <td><button onclick="ajouter('7')">7</button></td>
+                <td><button onclick="ajouter('8')">8</button></td>
+                <td><button onclick="ajouter('9')">9</button></td>
+                <td><button onclick="ajouter('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ajouter('pi')">π</button></td>
+                <td><button onclick="ajouter('cos(')">cos</button></td>
+                <td><button onclick="ajouter('log(')">log</button></td>
+                <td><button onclick="ajouter('4')">4</button></td>
+                <td><button onclick="ajouter('5')">5</button></td>
+                <td><button onclick="ajouter('6')">6</button></td>
+                <td><button onclick="ajouter('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ajouter('e')">e</button></td>
+                <td><button onclick="ajouter('tan(')">tan</button></td>
+                <td><button onclick="ajouter('sqrt(')">√</button></td>
+                <td><button onclick="ajouter('3')">3</button></td>
+                <td><button onclick="ajouter('2')">2</button></td>
+                <td><button onclick="ajouter('1')">1</button></td>
+                <td><button onclick="ajouter('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ajouter('EXP')">EXP</button></td>
+                <td><button onclick="ajouter('^2')">x²</button></td>
+                <td><button onclick="ajouter('^')">x^</button></td>
+                <td><button onclick="ajouter('.')">.</button></td>
+                <td><button onclick="ajouter('0')">0</button></td>
+                <td><button class="special-btn" onclick="calculer()">=</button></td>
+                <td><button onclick="ajouter('+')">+</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.1/math.min.js"></script>
+
+    <script>
+        function ajouter(valeur) {
+            document.getElementById('result').value += valeur;
+        }
+
+        function effacer() {
+            document.getElementById('result').value = '';
+        }
+
+        function calculer() {
+            try {
+                let expression = document.getElementById('result').value;
+                document.getElementById('result').value = math.evaluate(expression);
+            } catch (e) {
+                document.getElementById('result').value = 'Erreur';
+            }
+        }
+
+        function calculerInv() {
+            let resultValue = document.getElementById('result').value;
+            if (resultValue) {
+                try {
+                    let invResult = 1 / math.evaluate(resultValue);
+                    document.getElementById('result').value = invResult;
+                } catch (e) {
+                    document.getElementById('result').value = 'Erreur';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
